@@ -9,6 +9,9 @@ function clock(){
     let m = now.getMinutes();
     let s = now.getSeconds();
 
+    let day = now.getDay();
+    showDay(day);
+
     digital.innerHTML = `${fixZero(h)}:${fixZero(m)}:${fixZero(s)}`;
 
     // a seguir foi feito uma conta para dividir o relogio em partes iguais para fazer a rotação dos ponteiros ficarem uniformes.
@@ -28,6 +31,56 @@ function fixZero(time){
     } else{
         return time;
     }
+}
+
+function showDay(d){
+    let tday = '';
+
+    switch(d){
+        case 0:
+            tday = document.getElementById('dom').innerHTML;
+            remove(tday);
+            document.getElementById('dom').classList.add('s_day');
+        break;
+        case 1:
+            tday = document.getElementById('seg').innerHTML;
+            remove(tday);
+            document.getElementById('seg').classList.add('s_day');
+        break;
+        case 2:
+            tday = document.getElementById('ter').innerHTML;
+            remove(tday);
+            document.getElementById('ter').classList.add('s_day');
+        break;
+        case 3:
+            tday = document.getElementById('qua').innerHTML;
+            remove(tday);
+            document.getElementById('qua').classList.add('s_day');
+        break;
+        case 4:
+            tday = document.getElementById('qui').innerHTML;
+            remove(tday);
+            document.getElementById('qui').classList.add('s_day');
+        break;
+        case 5:
+            tday = document.getElementById('sex').innerHTML;
+            remove(tday);
+            document.getElementById('sex').classList.add('s_day');
+        break;
+        case 6:
+            tday = document.getElementById('sab').innerHTML;
+            remove(tday);remove();
+            document.getElementById('sab').classList.add('s_day');
+        break;
+    };
+}
+
+function remove(sDay){
+    document.querySelectorAll('.dia').forEach( item =>{
+        if(item.innerHTML !== sDay){
+            item.classList.remove('s_day');
+        }
+    });
 }
 
 setInterval(clock, 1000);

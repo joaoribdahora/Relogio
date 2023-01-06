@@ -109,7 +109,20 @@ a{
     font-size: 60px;
     margin-top: 20px;
 }
-
+.dias{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.dia{
+    color:rgb(134, 134, 134);
+    margin: 5px;
+}
+.s_day{
+    color:rgb(233, 232, 232);
+    font-weight: bold;
+    text-shadow: 0px 0px 2px #FFF;
+}
 footer {
     margin-top: 20px;
     color:  rgb(221, 216, 216);
