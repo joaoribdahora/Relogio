@@ -21,17 +21,17 @@ a{
     flex-direction: column;
     align-items: center;
 }
-h1 {
-    color: #FFF;
-    margin-bottom: 20px;
-}
-
 .relogio {
     width: 300px;
     height: 300px;
-    border: 5px solid #FFF;
+    border: 5px solid rgb(0, 44, 80);
     border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.2);
+    
+    /* Para adicionar mais de uma característica em um mesmo elemento, se deve separar por vírgula*/
+    box-shadow: -4px -4px 10px rgba(67,67,67,0.5),
+                inset 4px 4px 10px rgba(0,0,0,0.5),
+                inset -4px -4px 10px rgba(67,67,67,0.5),
+                4px 4px 10px rgba(0,0,0,0.3);
 }
 
 .riscos {
@@ -42,8 +42,8 @@ h1 {
     margin-top: -3px;
 }
 .risco {
-    width: 145px;
-    height: 5px;
+    width: 130px;
+    height: 2px;
     position: absolute;
     transform-origin: left;
     display: flex;
@@ -52,7 +52,7 @@ h1 {
 .risco .ponto {
     width: 15px;
     height: 100%;
-    background-color: #FFF;
+    background-color:rgb(221, 216, 216);;
 }
 
 .ponteiros {
@@ -66,42 +66,52 @@ h1 {
     transform-origin: left; /* Essa linha faz com que a origem do ponteiro fique para o lado esquerdo da div, dessa forma ela irá rotacionar ao redor desse eixo.
     Caso não tenha esse comando, a div iria rotacionar no eixo que passa pelo seu próprio centro*/
     transform: rotate(0deg); /* Essa linha faz a div rotacionar em uma determinada quantidade x de graus*/
-    border-radius: 50%;
     position: absolute;
 }
 
 .p_s {
     width: 100px;
-    height: 3px;
+    height: 1px;
     background-color: #F00;
 }
 .p_m {
-    width: 120px;
-    height: 7px;
-    background-color: #FFF;
+    width: 90px;
+    height: 5px;
+    background-color: rgb(221, 216, 216);
 }
 .p_h {
-    width: 70px;
-    height: 7px;
-    background-color: #FFF;
+    width: 60px;
+    height: 5px;
+    background-color: rgb(221, 216, 216);;
 }
 .encaixe {
     width: 15px;
     height: 15px;
-    background-color: #FFF;
+    background-color: rgb(221, 216, 216);;
     border-radius: 50%;
     position: absolute;
-    margin-top: -5px;
-    margin-left: -5px;
+    margin-top: -6px;
+    margin-left: -8px;
 }
 .digital {
-    color: #FFF;
-    font-size: 40px;
+    width: 300px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 7px solid rgb(0, 44, 80);
+    border-radius: 10px;
+    box-shadow: -4px -4px 10px rgba(67,67,67,0.5),
+                inset 4px 4px 10px rgba(0,0,0,0.5),
+                inset -4px -4px 10px rgba(67,67,67,0.5),
+                4px 4px 10px rgba(0,0,0,0.3);
+    color: rgb(221, 216, 216);
+    font-size: 60px;
     margin-top: 20px;
 }
 
 footer {
     margin-top: 20px;
-    color: #FFF;
+    color:  rgb(221, 216, 216);
     font-size: 13px;
 }
